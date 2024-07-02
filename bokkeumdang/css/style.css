@@ -1,0 +1,791 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {list-style: none;}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    border: 0 ;
+    vertical-align: middle;
+}
+body {
+    line-height: 1.42857143;
+    font-size: 17px;
+}
+.textbig {
+    font-size: 24px;
+}
+.textbbig {
+    font-size: 68px;
+}
+.textxsbig {
+    font-size: 16.5px;
+}
+@font-face {
+    font-family: SB Aggro B;
+    src: url('../fonts/SB_Window_Font/SB\ 어그로\ B.ttf');
+}
+@font-face {
+    font-family: SB Aggro M;
+    src: url('../fonts/SB_Window_Font/SB\ 어그로\ M.ttf');
+}
+@font-face {
+    font-family: SB Aggro L;
+    src: url('../fonts/SB_Window_Font/SB\ 어그로\ L.ttf');
+}
+@font-face {
+    font-family: NanumSquare;
+    src: url('../fonts/나눔스퀘어/NanumFontSetup_TTF_SQUARE/NanumSquareEB.ttf');
+}
+
+/* header */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    color: #000;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    height: 85px;
+    overflow: hidden;
+}
+.header-top {
+    width: 100%;
+    height: 85px;
+    position: relative;
+}
+.topwrap {
+    width: 77%;
+    display: flex;
+    height: 100%;
+    margin-left: 95.141px;
+    margin-right: 285.438px;
+}
+.header-logo {
+    width: 30%;
+}
+.header-logo a{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: url("../images/logo_bokk.png") no-repeat left/contain;
+    margin-top: 10px;
+}
+.header-list {
+    display: flex;
+    width: 70%;
+    line-height: 85px;
+}
+.header-list li {
+    flex: 1;
+    text-align: center;
+}
+.header-list li a {
+    font-family: NanumSquare;
+    font-weight: 800;
+    font-size: 24px;
+    color: #232323;
+}
+.middlewrap {
+    width: 77%;
+    margin-right: 15%;
+    margin-left: 5%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 20% 0 10%;
+    padding: 0;
+}
+.middleline {
+    float: right;
+    width: 79.5%;
+    position: relative;
+}
+.underline {
+    width: 12.5%;
+    height: 5px;
+    margin-left: 4%;
+    background-color: #c93935;
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+.header-down {
+    width: 100%;
+    background: url("../images/logo_bokk.png")no-repeat top left;
+    background-size: 400px;
+    background-color: #f4f4f4;
+    background-blend-mode: color-dodge;
+    border-bottom: 1px solid #e5e5e5;
+}
+.downwrap {
+    width: 77%;
+    margin-right: 15%;
+    margin-left: 5%;
+    display: flex;
+    margin-left: 95.141px;
+    margin-right: 285.438px;
+    padding: 24px 0;
+}
+.empty {
+    width: 30%;
+    max-height: 100px;
+}
+.downlistwrap {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+}
+.downlist {
+    flex: 1;
+    text-align: center;
+    margin: 15px 0;
+}
+.downlist li {
+    margin-bottom: 10px;
+}
+.downlist li a {
+    font-family: NanumSquare;
+    font-size: 18px;
+    line-height: 24px;
+    color: #676767;
+    font-weight: 600;
+}
+.remotelink {
+    position: absolute;
+    right: 4%;
+    top: 17px;
+}
+.remotelink a {
+    display: initial;
+}
+.remotelink a img {
+    width: 46px;
+    margin-left: 4px;
+}
+
+
+
+/* main */
+
+.home-topslide {
+    background: url('../images/bk_maintopimg.png')no-repeat center/cover;
+    width: 100%;
+    height: 930px;
+    overflow: auto;
+}
+.home-topslide .container {
+    position: relative;
+    max-width: 1240px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.home-topslide .container::before {
+    display: table;
+    content: '';
+}
+.maintextwrap {
+    position: relative;
+    z-index: 3;
+}
+.maintextwrap img {
+    position: absolute;
+    width: 60%;
+    top: 180px;
+    z-index: 999;
+    max-width: 620px;
+}
+.topmainimg {
+    position: absolute;
+    z-index: 1;
+    height: 930px;
+    width: 100%;
+}
+.maintoppoint01 {
+    position: absolute;
+    width: 21%;
+    left: 46%;
+    top: 10%;
+    animation: fadein 6s;
+}
+.maintoppoint02 {
+    position: absolute;
+    width: 25%;
+    left: 69%;
+    top: 14%;
+    animation: fadein 5s;
+}
+.maintoppoint03 {
+    position: absolute;
+    width: 32%;
+    left: 87%;
+    top: 29%;
+    animation: fadein 5s;
+}
+.maintoppoint04 {
+    position: absolute;
+    width: 18%;
+    left: 54%;
+    top: 31%;
+    animation: fadein 5s;
+}
+.maintoppoint05 {
+    position: absolute;
+    width: 44%;
+    left: 57%;
+    top: 49%;
+    animation: fadein 1s;
+    z-index: 2;
+}
+.maintoppoint06 {
+    position: absolute;
+    width: 14%;
+    right: 0;
+    bottom: 0;
+    animation: fadein 1s;
+    z-index: 1;
+}
+.mainbox {
+    position: relative;
+    height: 920px;
+    width: 730px;
+}
+.mainbox img {
+    width: 24%;
+    position: absolute;
+}
+.maintopbanner01 {
+    left: 2%;
+    animation: updownposition 4s infinite;
+}
+@keyframes updownposition {
+    0% {
+        bottom: 6%;
+    }
+    50% {
+        bottom: 8%;
+    }
+    100% {
+        bottom: 6%;
+    }
+}
+.maintopbanner02 {
+    left: 25%;
+    animation: downupposition 4s infinite;
+}
+@keyframes downupposition {
+    0% {
+        bottom: 10%;
+    }
+    50% {
+        bottom: 8%;
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+.maintopbanner03 {
+    left: 48%;
+    animation: updownposition 4s infinite;
+}
+.maintopbanner04 {
+    left: 71%;
+    animation: downupposition 4s infinite;
+}
+
+.mainseconbox {
+    background: url('../images/bg_bk_md.png')repeat;
+    padding-bottom: 30px;
+}
+.mainsection {
+    display: flex;
+    flex-wrap: wrap;
+}
+.snsslide {
+    color: #c93935;
+    padding-left: 8%;
+    padding-top: 80px;
+    width: 50%;
+    font-family: 'SB Aggro M';
+    position: relative;
+    padding-right: 15px;
+}
+.snsslide > p {
+    color: #9d693c;
+    padding-top: 1.5rem;
+    font-family: 'SB Aggro L';
+}
+.snsslide > p span {
+    padding-right: 5px;
+}
+.snsdatabox {
+    width: 96%;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.sns .swiper-slide {
+    padding: 8px;
+    width: 251px;
+}
+.snsdatabox .sns img {
+    width: 100%;
+    border-radius: 8%;
+    box-shadow: 2px 2px 10px rgba(157, 105, 60, 0.5);
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
+}
+.snsdatabox>.swiper-button-next {
+    position: absolute;
+    z-index: 999;
+    background-color: #c93935;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    top: 58%;
+    right: -20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.snsdatabox>.swiper-button-next::before {
+    background: url("../images/slidebtn_arrow.png") no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    transform: rotate(-180deg);
+}
+.snsdatabox>.swiper-button-prev {
+    position: absolute;
+    z-index: 999;
+    background-color: #c93935;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    top: 58%;
+    left: -20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.snsdatabox>.swiper-button-prev::before {
+    background: url("../images/slidebtn_arrow.png") no-repeat center/cover;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+}
+
+
+
+.best-menu p {
+    font-family: SB Aggro L;
+}
+.best-menu .textbbig {
+    font-family: SB Aggro M;
+}
+.menuslide {
+    padding: 80px 0 80px 80px;
+    background-color: #c93935;
+    color: #fff;
+    flex: 0 0 505;
+    max-width: 50%;
+    padding-right: 15px;
+}
+.mu-slideimg {
+    margin-right: 15%;
+}
+.mu-slideimg img {
+    width: 50%;
+    float: left;
+}
+.muslidefade {
+    opacity: 0.4;
+    transition: opacity 0.1s ease-in-out;
+}
+.active {
+    opacity: 1;
+}
+
+
+
+
+.bg {
+    background: url("../images/bg_bk_md.png");
+    padding-bottom: 130px;
+    position: relative;
+    display: flex;
+}
+.left, .mainsection {
+    flex: 0 0 50%;
+    overflow: hidden;
+}
+.animated-text {
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+}
+.animated-text2 {
+    position: absolute;
+    top: 65%;
+    background: transparent;
+    color: #9d693c;
+}
+.animated-track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.track-text {
+    opacity: 0.5;
+    font-size: 58px;
+    font-family: 'SB Aggro M';
+}
+.text-broutline {
+    color: floralwhite;
+    text-shadow: -1px -1px 0 #9d693c, 1px -1px 0 #9d693c, -1px 1px 0 #9d693c, 1px 1px 0 #9d693c;
+}
+.bg .img-wrap {
+    position: relative;
+}
+.bg .img-wrap img {
+    animation: rotate_image 50s linear infinite;
+    transform-origin: 50% 50%;
+    width: 50%;
+    position: absolute;
+    left: -120px;
+    top: -916px;
+}
+@keyframes rotate_image {
+    100% {transform: rotate(360deg);}
+}
+.storeslide, .interiorslide {
+    margin-top: 120px;
+    flex: 0 0 70%;
+    position: relative;
+    width: 33.333333%;
+    float: left;
+}
+.storebox {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    height: 411px;
+    box-shadow: 2px 2px 40px rgba(150, 138, 120, 0.5);
+    position: relative;
+}
+.storetitle {
+    width: 20%;
+    border-top: 4px solid #c93935;
+    display: flex;
+    padding: 120px 16px 0 0;
+    font-family: 'SB Aggro M';
+    writing-mode: vertical-lr;
+}
+.storetitle span {
+    transform: rotate(180deg);
+    color: #c93935;
+}
+.storepicture {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.storepicture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.store-swiper .p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 3rem 0;
+}
+.store-swiper .p span {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    font-size: 22px;
+    padding-right: .5rem;
+}
+.store-navwrap {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 20%;
+    top: 270px;
+    width: 100px;
+    aspect-ratio: 2 / 1;
+    z-index: 1;
+}
+.store-navwrap>.swipe-button-next, .store-navwrap>.swipe-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.store-navwrap img {
+    width: 100%;
+}
+
+.interiorslide {
+    margin-top: 10px;
+}
+.interiorbox {
+    width: 100%;
+    display: flex;
+    aspect-ratio: 3 / 1.8;
+    background-color: #3a2f29;
+}
+.ibleftbox {
+    width: 13%;
+    height: 399px;
+    background: url('../images/somitext_interior.png')no-repeat center right;
+    background-size: 50%;
+    position: relative;
+}
+.ibrightbox {
+    width: 87%;
+    height: 100%;
+}
+.interiortitle {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    color: #fff;
+    font-size: 2.2vW;
+}
+
+.interior-swiper {
+    height: 90%;
+    width: 100%;
+    padding: 0 5% 7% 0;
+    display: flex;
+    justify-content: center;
+}
+.interior-main {
+    width: 80%;
+}
+.interior-main>.swiper-wrapper>.swiper-slide {
+    border: 2px solid #3a2f29;
+}
+.interior-swiper img {
+    width: 100%;
+    height: 100%;
+}
+.interior-side {
+    width: 15%;
+}
+
+
+.specialwrap {
+    font-family: 'SB Aggro M';
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.mainsec-special {
+    background: url('../images/bg_bk_sp.png');
+    background-size: 100% 100%;
+    position: relative;
+    padding: 200px 0 50px 0;
+}
+.titlemoveimg5 {
+    position: absolute;
+    left: 34%;
+    bottom: 207px;
+}
+.titlemoveimg6 {
+    position: absolute;
+    right: 22%;
+    bottom: 45%;
+}
+.titlemoveimg7 {
+    position: absolute;
+    left: 27%;
+    bottom: 52%;
+}
+.specialtextwrap {
+    font-size: 36px;
+    padding: 30px 0;
+    position: relative;
+}
+.specialpoint {
+    display: block;
+    width: 35%;
+    margin-left: 33%;
+    position: absolute;
+    top: 110px;
+}
+
+.specialslide {
+    color: #fff;
+    position: relative;
+    padding-top: 160px;
+    margin: 0;
+    display: flex;
+}
+.bokkfoodbox {
+    padding-left: 100px;
+    width: 33.3333%;
+    float: left;
+    position: relative;
+    padding-right: 15px;
+    flex: 0 0 33.333333%;
+}
+.textmbbig {
+    position: relative;
+    line-height: initial;
+    font-size: 58px;
+    padding-top: 30px;
+    margin-top: 30px;
+    font-family: "SB Aggro M";
+}
+.specslidemdimg {
+    position: absolute;
+    left: 32%;
+    top: 400px;
+    z-index: 2;
+}
+.specslidemdimg img {
+    width: 100%;
+}
+.foodslideimg {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    object-fit: cover;
+}
+.special-swiper-thumbs {
+    z-index: 3;
+}
+.foodslidetext {
+    padding: 30px 0;
+    font-size: 40px;
+    font-family: "SB Aggro M";
+    position: relative;
+}
+
+
+
+
+
+
+
+.scrollbox>.animated-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    background-color: #000;
+    color: #fff;
+}
+.tracl-text {
+    opacity: 0.5;
+    font-size: 58px;
+    font-family: 'SB Aggro B';
+}
+.text-outline {
+    color: #000;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+
+
+
+/* footer */
+
+footer {
+    background-color: #564839;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+footer > .wrap {
+    border-bottom: 1px solid #675a4c;
+}
+footer .wrap .container {
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+footer .wrap .container .left {
+    color: #fff;
+    width: 66.66666%;
+    float: left;
+}
+footer .wrap .container .left a {
+    padding-right: 15px;
+}
+footer .wrap .container .left span {
+    width: 1px;
+    height: 15px;
+    background-color: #675a4c;
+    display: inline-block;
+    margin-right: 15px;
+}
+footer .wrap .container .right {
+    color: #fff;
+    width: 33.333333%;
+}
+footer .wrap .container .right p {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+footer > .container {
+    padding: 30px 15px 0px 15px;
+    width: 1240px;
+    margin: 0 auto;
+}
+.footer-block {
+    margin: 0 -15px 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-block .wrap {
+    width: 100%;
+    color: #fff;
+    padding: 0 15px 0 15px;
+    flex: 0 0 100%;
+}
+.footer-block .wrap p {
+    color: #ccc8c3;
+    padding-bottom: 20px;
+    font-size: 16.5px;
+}
+.footer-block .wrap p span {
+    font-weight: 700;
+    color: #fff;
+    padding-right: 10px;
+}
